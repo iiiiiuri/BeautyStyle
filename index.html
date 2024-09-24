@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/output.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <title>Beauty Style</title>
+</head>
+
+<style>
+.hover-parent:hover .hover-child {
+    color: #E7A481; /* Substitua pelo código da cor desejada */
+}
+</style>
+
+<body>
+
+    <header class="fixed top-0 left-0 w-full text-center p-4 bg-destaque px-4 md:px-16 shadow-lg z-50">
+        <h1 class="text-xl md:text-4xl font-serif font-semibold">BEAUTY STYLE</h1>
+        <div class="h-[1px] bg-black my-2 md:my-4"></div>
+    
+        <div class="flex flex-col md:flex-row justify-between p-2">
+            <nav class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-[2vw] font-serif items-center text-lg md:text-2xl">
+                <a href="brincos.html" class="text-white hover:text-gray-200 transition-all duration-100">BRINCOS</a>
+                <a href="aneis.html" class="text-white hover:text-gray-200 transition-all duration-100">ANÉIS</a>
+                <a href="colares.html" class="text-white hover:text-gray-200 transition-all duration-100">COLARES</a>
+                <a href="pulseiras.html" class="text-white hover:text-gray-200 transition-all duration-100">PULSEIRAS</a>
+            </nav>
+    
+            <div class="flex justify-center md:justify-end space-x-2 mt-2 md:mt-0">
+                <input type="text" class="border border-gray-300 rounded-md px-2 py-1 shadow-md" placeholder="Pesquisar">
+                <a href="cart.html" class="border-[2px] rounded-full w-10 h-10 text-center flex justify-center items-center text-white border-white hover:bg-white hover-parent shadow-md">
+                    <i class="bi bi-basket3 text-lg hover-child"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-white shadow-lg mt-20">
+        <div class="relative w-full h-96 md:h-96 lg:h-[75vh] overflow-hidden" id="carousel">
+            <div class="carousel-images relative h-full">
+                <img src="src/img/image1.webp" alt="Modelo 1" class="absolute top-0 left-0 w-full h-full object-cover shadow-lg transition-transform duration-500 ease-in-out opacity-100 translate-x-0">
+                <img src="src/img/image2.webp" alt="Modelo 2" class="absolute top-0 left-0 w-full h-full object-cover shadow-lg transition-transform duration-500 ease-in-out opacity-0 translate-x-full">
+                <img src="src/img/image3.webp" alt="Modelo 3" class="absolute top-0 left-0 w-full h-full object-cover shadow-lg transition-transform duration-500 ease-in-out opacity-0 translate-x-full">
+            </div>
+    
+            <!-- Setas de navegação -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-destaque bg-white p-2" id="prevBtn">
+              <i class="bi bi-chevron-left text-4xl"></i>
+            </button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-destaque bg-white p-2" id="nextBtn">
+              <i class="bi bi-chevron-right text-4xl"></i>
+            </button>
+    
+            <!-- Indicadores -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2" id="indicators">
+                <span class="h-3 w-3 bg-pink-600 rounded-full shadow-md"></span>
+                <span class="h-3 w-3 bg-gray-300 rounded-full shadow-md"></span>
+                <span class="h-3 w-3 bg-gray-300 rounded-full shadow-md"></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mt-6 font-serif px-16 my-2">
+        <h2 class="text-2xl font-bold text-gray-700">ELEGÂNCIA QUE REFLETE SUA ESSÊNCIA</h2>
+        <div class="h-[1px] bg-black my-4"></div> 
+    </div>
+
+
+    <section>
+        <div class="flex justify-center space-x-4 mx-16">
+            <a href="aneis.html" class="relative w-1/4  border-4 border-destaque shadow-lg">
+                <img src="src/img/section2/image1.webp" class="w-full h-full object-cover" alt="Imagem 1">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
+                    <span class="text-white md:text-4xl font-bold font-serif">Anéis</span>
+                </div>
+            </a>
+            <a href="bricos.html" class="relative w-1/4  border-4 border-destaque shadow-lg"> 
+                <img src="src/img/section2/image2.webp" class="w-full h-full object-cover" alt="Imagem 2">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
+                    <span class="text-white md:text-4xl font-bold font-serif">Brincos</span>
+                </div>
+            </a> 
+            <a href="pulseiras.html" class="relative w-1/4  border-4 border-destaque shadow-lg">
+                <img src="src/img/section2/image3.webp" class="w-full h-full object-cover" alt="Imagem 3">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
+                    <span class="text-white md:text-4xl font-bold font-serif">Pulseiras</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div class="text-center mt-6 font-serif px-16 my-2">
+        <h2 class="text-2xl font-bold text-gray-700">ACESSÓRIOS SOFISTICADOS PARA SEU COTIDIANO, <br> EVENTOS DE CLASSE E OUTROS.</h2>
+        <div class="h-[1px] bg-black my-4"></div> 
+    </div>
+
+    <section id="produtos-container" class="py-8 mx-16">
+    </section>
+
+    <div class="text-center mt-6 font-serif px-16 my-2">
+        <h2 class="text-2xl font-bold text-gray-700">CLASSE E ESTILO PARA TODOS OS GOSTOS </h2>
+        <div class="h-[1px] bg-black my-4"></div> 
+    </div>
+
+    <section>
+        <div class="flex justify-center space-x-2 space-y-2 p-8">
+            <div class="">
+                <img src="src/img/section4/image1.webp" class="" alt="">
+            </div>
+            <div class="space-y-2">
+                <img src="src/img/section4/image3.webp" class="" alt="">
+                <img src="src/img/section4/image2.webp" class="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mt-6 font-serif px-16 my-2">
+        <div class="h-[1px] bg-gray-400 my-4"></div> 
+    </div>
+
+    <footer class="flex w-full p-2 items-center justify-between px-16">
+        <h1 class="text-lg font-serif font-semibold text-gray-400">BEAUTY STYLE - 2024</h1>
+         <ul class="flex space-x-4">
+            <li>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-400 hover:text-gray-500 bi bi-instagram text-xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-400 hover:text-gray-500 bi bi-facebook text-xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-400 hover:text-gray-500 bi bi-whatsapp text-xl"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    
+      
+
+
+
+
+<script src="src/js/carrosel.js"></script>
+<script src="src/js/produtos.js"></script>
+    
+</body>
+</html>

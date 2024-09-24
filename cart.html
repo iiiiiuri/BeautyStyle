@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/output.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss-animated@1.0.5/dist/tailwindcss-animated.min.css">
+    <title>Beauty Style - Carrinho</title>
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full text-center p-4 bg-destaque px-4 md:px-16 shadow-lg z-50 animate-fadeInDown">
+        <h1 class="text-lg md:text-4xl font-serif font-semibold">BEAUTY STYLE</h1>
+        <div class="h-[1px] bg-black my-2 md:my-4"></div>
+
+        <div class="flex flex-col md:flex-row justify-between p-2 animate-fadeIn">
+            <nav class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-[2vw] font-serif items-center text-base md:text-2xl">
+                <a href="index.html" class="text-white hover:text-gray-200 transition-all duration-100 animate-pulse">HOME</a>
+                <a href="aneis.html" class="text-white hover:text-gray-200 transition-all duration-100 animate-pulse">ANÉIS</a>
+                <a href="brincos.html" class="text-white hover:text-gray-200 transition-all duration-100 animate-pulse">BRINCOS</a>
+                <a href="colares.html" class="text-white hover:text-gray-200 transition-all duration-100 animate-pulse">COLARES</a>
+                <a href="pulseiras.html" class="text-white hover:text-gray-200 transition-all duration-100 animate-pulse">PULSEIRAS</a>
+            </nav>
+
+            <div class="flex justify-center md:justify-end space-x-2 mt-2 md:mt-0">
+                <input type="text" class="border border-gray-300 rounded-md px-2 py-1 shadow-md" placeholder="Pesquisar">
+                <a href="cart.html" class="border-[2px] rounded-full w-10 h-10 text-center flex justify-center items-center text-white border-white hover:bg-white hover-parent shadow-md">
+                    <i class="bi bi-basket3 text-lg hover-child"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="relative bg-black mt-32 md:mt-40 mb-2 animate-fadeIn">
+        <img src="src/img/carrinho/hero.png" class="w-full h-24 md:h-32 object-cover opacity-50" alt="">
+        <h1 class="absolute inset-0 flex items-center justify-center text-white font-serif font-bold text-2xl md:text-4xl animate-fadeInUp">CARRINHO</h1>
+    </div>
+
+    <div id="" class="w-full p-4 md:p-6 animate-fadeIn">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Coluna dos itens no carrinho -->
+            <div class="col-span-2 space-y-4 animate-fadeInLeft">
+                <!-- Carrinho de itens será gerado aqui -->
+                <div id="cart-container" class="animate-fadeInUp"></div>
+            </div>
+        
+            <!-- Coluna de pagamento e resumo -->
+            <div class="col-span-1 bg-white p-4 shadow-lg rounded-lg animate-fadeInRight">
+                <div class="text-center">
+                    <h2 class="text-xl md:text-2xl font-bold font-serif">RESUMO DO PEDIDO</h2>
+                    <div class="h-[1px] bg-gray-200 my-2"></div>
+                </div>
+        
+                <!-- Preço Total -->
+                <div class="text-center">
+                    <h2 id="total-price" class="text-3xl md:text-4xl font-bold text-destaque animate-pulse">R$ 0,00</h2>
+                    <p class="text-xs md:text-sm text-apoio">À VISTA</p>
+                    <p id="installment-info" class="text-xs text-apoio">OU EM ATÉ 12X DE R$ 0,00</p>
+                </div>
+        
+                <h3 class="mt-4 text-md md:text-lg font-bold font-serif">PAGAMENTO</h3>
+        
+                <!-- Formulário de opções de pagamento -->
+                <form class="mt-4 space-y-4 text-sm md:text-base">
+                    <div class="relative border border-gray-300 p-4 rounded-lg hover:shadow-md transition-shadow duration-300 ease-in-out animate-fadeInLeft">
+                    <input type="radio" name="payment" id="parcelado" class="appearance-none h-4 w-4 border border-gray-300 rounded-full checked:bg-[#FEADAC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FEADAC] mr-2">
+                    <label for="parcelado" class="cursor-pointer select-none font-medium">Parcelado em até <span class="font-bold">12</span> vezes</label>
+                    </div>
+                
+                    <div class="relative border border-gray-300 p-4 rounded-lg hover:shadow-md transition-shadow duration-300 ease-in-out animate-fadeInLeft">
+                    <input type="radio" name="payment" id="debito" class="appearance-none h-4 w-4 border border-gray-300 rounded-full checked:bg-[#FEADAC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FEADAC] mr-2">
+                    <label for="debito" class="cursor-pointer select-none font-medium">Cartão de débito</label>
+                    </div>
+                
+                    <div class="relative border border-gray-300 p-4 rounded-lg hover:shadow-md transition-shadow duration-300 ease-in-out animate-fadeInLeft">
+                    <input type="radio" name="payment" id="boleto" class="appearance-none h-4 w-4 border border-gray-300 rounded-full checked:bg-[#FEADAC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FEADAC] mr-2">
+                    <label for="boleto" class="cursor-pointer select-none font-medium">Boleto (até 3 dias úteis)</label>
+                    </div>
+                
+                    <div class="relative border border-gray-300 p-4 rounded-lg hover:shadow-md transition-shadow duration-300 ease-in-out animate-fadeInLeft">
+                    <input type="radio" name="payment" id="pix" class="appearance-none h-4 w-4 border border-gray-300 rounded-full checked:bg-[#FEADAC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FEADAC] mr-2">
+                    <label for="pix" class="cursor-pointer select-none font-medium">Pix</label>
+                    </div>
+                </form>
+        
+                <!-- Botão de finalizar compra -->
+                <button class="w-full mt-6 py-4 bg-[#FEADAC] text-white rounded-lg text-sm md:text-base animate-fadeInUp">FINALIZAR COMPRA</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="relative bottom-0 flex flex-col md:flex-row w-full p-2 items-center justify-between px-4 md:px-16 text-sm md:text-base">
+        <h1 class="text-lg font-serif font-semibold text-gray-400 animate-fadeInUp">BEAUTY STYLE - 2024</h1>
+        <ul class="flex space-x-4 mt-2 md:mt-0 animate-fadeInUp">
+            <li>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-400 hover:text-gray-500 bi bi-instagram text-lg md:text-xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-400 hover:text-gray-500 bi bi-facebook text-lg md:text-xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                    <i class="text-gray-400 hover:text-gray-500 bi bi-whatsapp text-lg md:text-xl"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="src/js/cartDisplay.js"></script>
+</body>
+</html>
