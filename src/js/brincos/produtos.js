@@ -58,11 +58,11 @@ function popularBrincos(brincos) {
     <div class="absolute bottom-0 left-0 right-0 flex justify-center p-2 mb-2">
       <button class="bg-detalhes text-white border-[2px] border-apoio text-md font-semibold px-6 py-3 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-apoio hover:text-black add-to-cart"
               data-nome="${brinco.nome}" data-preco="${brinco.preco}" data-imagem="${brinco.imagem}">
-          Adicionar ao Carrinho
+          Adicionar ao Carrinho 
       </button>
     </div>
   </div>
-</div>
+</div> 
     `;
     container.innerHTML += brincoHTML;
   });
