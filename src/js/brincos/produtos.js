@@ -37,7 +37,7 @@ function popularBrincos(brincos) {
 
   brincos.forEach(brinco => {
     const brincoHTML = `
-<div class="relative bg-gray-50 shadow-lg rounded-md overflow-hidden pb-14">
+<div class="relative bg-gray-50 shadow-lg rounded-md overflow-hidden pb-20">
   <div class="">
     <img src="${brinco.imagem}" class="w-full h-60 object-cover" alt="${brinco.nome}">
   </div>
@@ -55,7 +55,7 @@ function popularBrincos(brincos) {
     <p class="text-gray-900 font-bold text-2xl text-center mt-2">${brinco.preco}</p>
     
     <!-- Botão estilizado -->
-    <div class="absolute bottom-0 left-0 right-0 flex justify-center p-2">
+    <div class="absolute bottom-0 left-0 right-0 flex justify-center p-2 mb-2">
       <button class="bg-detalhes text-white border-[2px] border-apoio text-md font-semibold px-6 py-3 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-apoio hover:text-black add-to-cart"
               data-nome="${brinco.nome}" data-preco="${brinco.preco}" data-imagem="${brinco.imagem}">
           Adicionar ao Carrinho

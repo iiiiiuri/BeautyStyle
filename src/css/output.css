@@ -983,10 +983,6 @@ input[type="range"]::-ms-fill-lower{
   right: 0px;
 }
 
-.right-4{
-  right: 1rem;
-}
-
 .start-0{
   inset-inline-start: 0px;
 }
@@ -997,10 +993,6 @@ input[type="range"]::-ms-fill-lower{
 
 .top-16{
   top: 4rem;
-}
-
-.top-4{
-  top: 1rem;
 }
 
 .z-30{
@@ -1434,6 +1426,11 @@ input[type="range"]::-ms-fill-lower{
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-red-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(119 29 29 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -1502,6 +1499,30 @@ input[type="range"]::-ms-fill-lower{
 
 .pb-14{
   padding-bottom: 3.5rem;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
+}
+
+.pb-8{
+  padding-bottom: 2rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
+.pb-24{
+  padding-bottom: 6rem;
+}
+
+.pb-1{
+  padding-bottom: 0.25rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
 }
 
 .text-left{

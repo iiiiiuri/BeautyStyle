@@ -34,10 +34,10 @@ const aneis = [
 function popularAneis(aneis) {
   const container = document.querySelector('.grid');
   container.innerHTML = ''; // Limpa o conteúdo existente
-
+ 
   aneis.forEach(anel => {
     const anelHTML = `
-<div class="relative bg-gray-50 shadow-lg rounded-md overflow-hidden pb-14">
+<div class="relative bg-gray-50 shadow-lg rounded-md overflow-hidden pb-20">
   <div class="">
     <img src="${anel.imagem}" class="w-full h-60 object-cover" alt="${anel.nome}">
   </div>
@@ -55,7 +55,7 @@ function popularAneis(aneis) {
     <p class="text-gray-900 font-bold text-2xl text-center mt-2">${anel.preco}</p>
     
     <!-- Botão estilizado -->
-    <div class="absolute bottom-0 left-0 right-0 flex justify-center p-2">
+    <div class="absolute bottom-0 left-0 right-0 flex justify-center p-2 mb-2">
       <button class="bg-detalhes text-white border-[2px] border-apoio text-md font-semibold px-6 py-3 rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-apoio hover:text-black add-to-cart"
               data-nome="${anel.nome}" data-preco="${anel.preco}" data-imagem="${anel.imagem}">
           Adicionar ao Carrinho
@@ -63,19 +63,15 @@ function popularAneis(aneis) {
     </div>
   </div>
 </div>
+
+
+
     `;
     container.innerHTML += anelHTML;
   });
 }
 
-// Chama a função para popular os anéis e adicionar eventos de clique
+// Chama a função para popular os anéis
 document.addEventListener('DOMContentLoaded', () => {
   popularAneis(aneis);
-
-  document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
-      const nome = button.getAttribute('data-nome');
-      showAlert(`O produto "${nome}" foi adicionado ao carrinho!`);
-    });
-  });
 });
