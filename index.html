@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/output.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <title>Beauty Style</title>
 </head>
-
-<style>
-.hover-parent:hover .hover-child {
-    color: #E7A481; /* Substitua pelo código da cor desejada */
-}
-</style>
 
 <body>
 
@@ -22,45 +17,59 @@
     
         <div class="flex flex-col md:flex-row justify-between p-2">
             <nav class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-[2vw] font-serif items-center text-lg md:text-2xl">
-                <a href="brincos.html" class="text-white hover:text-gray-200 transition-all duration-100">BRINCOS</a>
-                <a href="aneis.html" class="text-white hover:text-gray-200 transition-all duration-100">ANÉIS</a>
-                <a href="colares.html" class="text-white hover:text-gray-200 transition-all duration-100">COLARES</a>
-                <a href="pulseiras.html" class="text-white hover:text-gray-200 transition-all duration-100">PULSEIRAS</a>
+                <a href="brincos.html" class="text-white hover:text-zinc-600 transition-all duration-100">BRINCOS</a>
+                <a href="aneis.html" class="text-white hover:text-zinc-600 transition-all duration-100">ANÉIS</a>
+                <a href="colares.html" class="text-white hover:text-zinc-600 transition-all duration-100">COLARES</a>
+                <a href="pulseiras.html" class="text-white hover:text-zinc-600 transition-all duration-100">PULSEIRAS</a>
             </nav>
     
             <div class="flex justify-center md:justify-end space-x-2 mt-2 md:mt-0">
                 <input type="text" class="border border-gray-300 rounded-md px-2 py-1 shadow-md" placeholder="Pesquisar">
-                <a href="cart.html" class="border-[2px] rounded-full w-10 h-10 text-center flex justify-center items-center text-white border-white hover:bg-white hover-parent shadow-md">
-                    <i class="bi bi-basket3 text-lg hover-child"></i>
+                <a href="cart.html" class="border-[2px] rounded-full w-10 h-10 text-center flex justify-center items-center text-white border-white hover:bg-white hover:text-destaque shadow-md transition-colors duration-150">
+                    <i class="bi bi-basket3 text-lg transition-colors duration-150"></i>
                 </a>
             </div>
-        </div>
+        </div> 
     </header>
-
-    <section class="relative bg-white shadow-lg mt-20">
-        <div class="relative w-full h-96 md:h-96 lg:h-[75vh] overflow-hidden" id="carousel">
-            <div class="carousel-images relative h-full">
-                <img src="src/img/image1.webp" alt="Modelo 1" class="absolute top-0 left-0 w-full h-full object-cover shadow-lg transition-transform duration-500 ease-in-out opacity-100 translate-x-0">
-                <img src="src/img/image2.webp" alt="Modelo 2" class="absolute top-0 left-0 w-full h-full object-cover shadow-lg transition-transform duration-500 ease-in-out opacity-0 translate-x-full">
-                <img src="src/img/image3.webp" alt="Modelo 3" class="absolute top-0 left-0 w-full h-full object-cover shadow-lg transition-transform duration-500 ease-in-out opacity-0 translate-x-full">
+<section class="relative bg-white shadow-lg mt-20 ">
+    <div id="indicators-carousel" class="relative w-full md:h-[65vh]" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-96 md:h-full overflow-hidden rounded-lg">
+            <!-- Item 1 -->
+            <div class="duration-700 ease-in-out" data-carousel-item="active">
+                <img src="src/img/carrosel/image1.webp" class="absolute block w-full h-full object-cover" alt="...">
             </div>
-    
-            <!-- Setas de navegação -->
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-destaque bg-white p-2" id="prevBtn">
-              <i class="bi bi-chevron-left text-4xl"></i>
-            </button>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-destaque bg-white p-2" id="nextBtn">
-              <i class="bi bi-chevron-right text-4xl"></i>
-            </button>
-    
-            <!-- Indicadores -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2" id="indicators">
-                <span class="h-3 w-3 bg-pink-600 rounded-full shadow-md"></span>
-                <span class="h-3 w-3 bg-gray-300 rounded-full shadow-md"></span>
-                <span class="h-3 w-3 bg-gray-300 rounded-full shadow-md"></span>
+            <!-- Item 2 -->
+            <div class="duration-700 ease-in-out" data-carousel-item>
+                <img src="src/img/carrosel/image2.webp" class="absolute block w-full h-full object-cover" alt="...">
             </div>
+            <!-- Item 3 -->
+            <div class="duration-700 ease-in-out" data-carousel-item>
+                <img src="src/img/carrosel/image3.webp" class="absolute block w-full h-full object-cover" alt="...">
+            </div>
+            <!-- Item 4 -->
         </div>
-    </section>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                <i class="bi bi-chevron-left text-apoio"></i>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                <i class="bi bi-chevron-right text-apoio"></i>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>    
+</section>
 
     <div class="text-center mt-6 font-serif px-16 my-2">
         <h2 class="text-2xl font-bold text-gray-700">ELEGÂNCIA QUE REFLETE SUA ESSÊNCIA</h2>
@@ -69,25 +78,33 @@
 
 
     <section>
-        <div class="flex justify-center space-x-4 mx-16">
-            <a href="aneis.html" class="relative w-1/4  border-4 border-destaque shadow-lg">
-                <img src="src/img/section2/image1.webp" class="w-full h-full object-cover" alt="Imagem 1">
-                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
-                    <span class="text-white md:text-4xl font-bold font-serif">Anéis</span>
-                </div>
-            </a>
-            <a href="bricos.html" class="relative w-1/4  border-4 border-destaque shadow-lg"> 
-                <img src="src/img/section2/image2.webp" class="w-full h-full object-cover" alt="Imagem 2">
+        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 mx-4 md:mx-16">
+
+            <a href="bricos.html" class="relative w-full md:w-1/4 border-4 border-destaque shadow-lg"> 
+                <img src="src/img/section2/image2.webp" class="w-full h-28 md:h-full object-cover" alt="Imagem 2">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
                     <span class="text-white md:text-4xl font-bold font-serif">Brincos</span>
                 </div>
             </a> 
-            <a href="pulseiras.html" class="relative w-1/4  border-4 border-destaque shadow-lg">
-                <img src="src/img/section2/image3.webp" class="w-full h-full object-cover" alt="Imagem 3">
+            <a href="aneis.html" class="relative w-full md:w-1/4 border-4 border-destaque shadow-lg">
+                <img src="src/img/section2/image1.webp" class="w-full h-28 md:h-full object-cover" alt="Imagem 1">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
+                    <span class="text-white md:text-4xl font-bold font-serif">Anéis</span>
+                </div>
+            </a>
+            <a href="colares.html" class="relative w-full md:w-1/4 border-4 border-destaque shadow-lg">
+                <img src="src/img/section2/image4.webp" class="w-full h-28 md:h-full object-cover" alt="Imagem 4">
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
+                    <span class="text-white md:text-4xl font-bold font-serif">Colares</span>
+                </div>
+            </a>
+            <a href="pulseiras.html" class="relative w-full md:w-1/4 border-4 border-destaque shadow-lg">
+                <img src="src/img/section2/image3.webp" class="w-full h-28 md:h-full object-cover" alt="Imagem 3">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-150">
                     <span class="text-white md:text-4xl font-bold font-serif">Pulseiras</span>
                 </div>
             </a>
+
         </div>
     </section>
 
@@ -124,7 +141,7 @@
         <h1 class="text-lg font-serif font-semibold text-gray-400">BEAUTY STYLE - 2024</h1>
          <ul class="flex space-x-4">
             <li>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/beautystylecreations/" target="_blank" rel="noopener noreferrer">
                     <i class="text-gray-400 hover:text-gray-500 bi bi-instagram text-xl"></i>
                 </a>
             </li>
@@ -142,11 +159,6 @@
     </footer>
     
       
-
-
-
-
-<script src="src/js/carrosel.js"></script>
 <script src="src/js/produtos.js"></script>
     
 </body>

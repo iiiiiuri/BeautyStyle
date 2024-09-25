@@ -46,8 +46,8 @@ function popularProdutos(produtos) {
             <p class="text-md text-apoio mt-1">À VISTA</p>
             
             <div class="mt-4 w-full flex">
-              <button class="bg-detalhes text-black md:py-2 md:px-4 rounded-sm hover:bg-apoio hover:text-white transition-all duration-100">COMPRAR</button>
-              <button class="bg-detalhes text-black md:py-2 md:px-4 ml-2 rounded-sm hover:bg-apoio hover:text-white transition-all duration-100">VER MAIS</button>
+              <button class="bg-detalhes text-black py-2 px-4 rounded-sm hover:bg-apoio hover:text-white transition-all duration-100">COMPRAR</button>
+              <button class="bg-detalhes text-black py-2 px-4 ml-2 rounded-sm hover:bg-apoio hover:text-white transition-all duration-100">VER MAIS</button>
             </div>
           </div>
         </div>
