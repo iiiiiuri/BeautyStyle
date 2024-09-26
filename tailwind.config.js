@@ -18,6 +18,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-animated'), 
-    require('flowbite/plugin')
+    // require('flowbite/plugin')
   ],
 }
